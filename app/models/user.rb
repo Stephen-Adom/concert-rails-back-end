@@ -1,8 +1,10 @@
 class User < ApplicationRecord
+  has_secure_password
   before_create :generate_authentication_token
   
   validates :name, presence: true
   validates :username, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true
 
   has_many :reservations, dependent: :destroy, class_name: 'Reservation', foreign_key: 'user_id'
   
