@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       post '/register', to: 'users#create'
       post '/login', to: 'sessions#create'
-      resources :concerts, only: [:index]
+      resources :concerts, only: [:index, :show]
     end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
