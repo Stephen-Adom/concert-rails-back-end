@@ -8,8 +8,6 @@ class ApplicationController < ActionController::API
   
       if token.blank? || @current_user.nil?
         render json: { error: 'Invalid credentials' }, status: :unauthorized
-      else
-        render json: { message: "Welcome, #{current_user.name}!" }
       end
     end
 end
