@@ -7,7 +7,6 @@ class Api::V1::ConcertsController < ApplicationController
   def show
     @concert = Concert.includes(:concert_halls).find(params[:id])
 
-    render json: @concert.to_json(include: {concert_halls: {include: :city}})
-  
+    render json: @concert.to_json(include: { concert_halls: { include: :city } })
   end
 end
