@@ -8,7 +8,6 @@ class User < ApplicationRecord
 
   has_many :reservations, dependent: :destroy, class_name: 'Reservation', foreign_key: 'user_id'
 
-
   private
 
   def generate_authentication_token
