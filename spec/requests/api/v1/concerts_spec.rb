@@ -82,6 +82,9 @@ RSpec.describe 'api/v1/concerts', type: :request do
     end
 
     delete('delete concert') do
+      
+      parameter name: 'Authorization', in: :header, type: :string, description: 'Bearer token'
+
       response(200, 'successful') do
         let(:id) { '1' }
 
