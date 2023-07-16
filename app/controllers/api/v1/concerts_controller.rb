@@ -4,6 +4,12 @@ class Api::V1::ConcertsController < ApplicationController
     concerts = Concert.all
     render json: concerts
   end
+  
+    def show
+    @concert = Concert.includes(concert_halls: :city).find(params[:id])                                                                                                                    
+    render json: @concert.to_json(include: { concert_halls: { include: { city: { only: :name } } } })
+
+  end
 
   def create
     if Concert.find_by(name: concert_params[:name])
@@ -39,4 +45,5 @@ class Api::V1::ConcertsController < ApplicationController
   def concert_hall_params
     params.require(:concert_hall).permit(:city_id, :date)
   end
+
 end
