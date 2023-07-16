@@ -8,6 +8,7 @@ class CreateConcerts < ActiveRecord::Migration[7.0]
       t.integer :reserved_seats
       t.string :artist
       t.text :image
+      t.boolean :active, default: true
 
       t.timestamps
     end
