@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       post '/register', to: 'users#create'
       post '/login', to: 'sessions#create'
       resources :reservations, only: [:index]
-      resources :concerts, only: [:index, :show]
+      resources :concerts, only: [:index, :show, :create, :destroy]
     end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
