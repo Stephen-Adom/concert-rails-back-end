@@ -11,6 +11,7 @@ class Concert < ApplicationRecord
 
   has_many :concert_halls, class_name: 'ConcertHall', foreign_key: 'concert_id'
   has_many :cities, through: :concert_halls
+  has_many :reservations, through: :concert_halls
 
   private
 

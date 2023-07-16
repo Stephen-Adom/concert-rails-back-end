@@ -36,6 +36,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_13_190152) do
     t.integer "reserved_seats"
     t.string "artist"
     t.text "image"
+    t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

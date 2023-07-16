@@ -5,10 +5,8 @@ class ApplicationController < ActionController::API
     token = request.headers['Authorization']&.split(' ')&.last
     @current_user = User.find_by(authentication_token: token)
 
-    if token.blank? || @current_user.nil?
-      render json: { error: 'Invalid credentials' }, status: :unauthorized
-    else
-      render json: { message: "Welcome, #{current_user.name}!" }
-    end
+    return unless token.blank? || @current_user.nil?
+
+    render json: { error: 'Invalid credentials' }, status: :unauthorized
   end
 end
