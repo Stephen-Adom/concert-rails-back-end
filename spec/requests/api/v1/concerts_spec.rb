@@ -43,7 +43,7 @@ RSpec.describe 'api/v1/concerts', type: :request do
     end
 
     post('create concert') do
-      consumes 'application/json' # Specify that the endpoint consumes JSON
+      consumes 'application/json' 
       produces 'application/json'
 
       parameter name: 'Authorization', in: :header, type: :string, description: 'Bearer token'
