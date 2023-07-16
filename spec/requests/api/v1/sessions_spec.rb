@@ -1,9 +1,7 @@
 require 'swagger_helper'
 
 RSpec.describe 'api/v1/sessions', type: :request do
-
   path '/api/v1/login' do
-
     post('create session') do
       consumes 'application/json' # Specify that the endpoint consumes JSON
 
@@ -13,10 +11,9 @@ RSpec.describe 'api/v1/sessions', type: :request do
           username: { type: :string },
           password: { type: :string }
         },
-        required: ['username', 'password']
+        required: %w[username password]
       }
       response(200, 'successful') do
-
         after do |example|
           example.metadata[:response][:content] = {
             'application/json' => {

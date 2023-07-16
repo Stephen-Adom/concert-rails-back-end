@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
 
 RSpec.configure do |config|
@@ -17,7 +15,6 @@ RSpec.configure do |config|
   config.swagger_docs = {
     'v1/swagger.yaml' => {
       swagger: '2.0',
-      # Authorization: 'Bearer fcNnUfD+DF0J+3U++4Q8pRKyXWkQYO9q9ubRUIEDU8NyjbqB54ibwFF83narC4AGYKKs9f4O1ohCk8bQIZUAOw==',
       info: {
         title: 'API V1',
         version: 'v1'
