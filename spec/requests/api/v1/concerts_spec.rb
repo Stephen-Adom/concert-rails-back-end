@@ -43,7 +43,7 @@ RSpec.describe 'api/v1/concerts', type: :request do
     end
 
     post('create concert') do
-      consumes 'application/json' 
+      consumes 'application/json'
       produces 'application/json'
 
       parameter name: 'Authorization', in: :header, type: :string, description: 'Bearer token'
@@ -82,7 +82,6 @@ RSpec.describe 'api/v1/concerts', type: :request do
     end
 
     delete('delete concert') do
-      
       parameter name: 'Authorization', in: :header, type: :string, description: 'Bearer token'
 
       response(200, 'successful') do
