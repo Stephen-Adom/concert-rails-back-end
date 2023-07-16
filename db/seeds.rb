@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Concert.create(name: "RaveFactory", band: "Schkoon", description: "Arabian vibes", total_seats: 100, artist: "Amine", image: "unsplash.com/img/1")
+City.create(name: "LA")
+ConcertHall.create(concert_id: 1, city_id: 1, date: "2024-02-02")
+Reservation.create(user_id: 1, concert_hall_id: 1)
+
+Concert.create(name: "BraveWorld", band: "Octopus", description: "Industrial vibes", total_seats: 100, artist: "Ocrum", image: "unsplash.com/img/2")
+City.create(name: "NY")
+ConcertHall.create(concert_id: 2, city_id: 2, date: "2024-04-04")
+Reservation.create(user_id: 1, concert_hall_id: 2)

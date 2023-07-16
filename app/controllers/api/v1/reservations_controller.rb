@@ -3,7 +3,8 @@ class Api::V1::ReservationsController < ApplicationController
 
   def index
     # reservations = @current_user.reservations
-    reservations = @current_user.reservations.includes(concert_hall: :concert).where(concert_halls: { concerts: { active: true } })
+    reservations = @current_user.reservations.includes(concert_hall: :concert)
+                                .where(concert_halls: { concerts: { active: true } })
 
 
     reservations_data = if reservations.empty?
