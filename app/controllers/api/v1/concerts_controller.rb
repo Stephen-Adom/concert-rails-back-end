@@ -22,10 +22,9 @@ class Api::V1::ConcertsController < ApplicationController
   def destroy
     if Concert.find_by(id: params[:id])
       concert = Concert.find(params[:id])
-      concert.reservations.destroy_all if concert.reservations.any?
-      concert.concert_halls.destroy_all if concert.concert_halls.any?
-      concert.destroy
-      render json: { message: 'Concert deleted' }, status: :ok
+      concert.active = false
+      concert.save
+      render json: { message: 'Concert marked deleted' }, status: :ok
     else
       render json: { error: 'Concert not found' }, status: :not_found
     end
