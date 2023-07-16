@@ -3,7 +3,7 @@ require 'swagger_helper'
 RSpec.describe 'api/v1/sessions', type: :request do
   path '/api/v1/login' do
     post('create session') do
-      consumes 'application/json' # Specify that the endpoint consumes JSON
+      consumes 'application/json' 
 
       parameter name: :credentials, in: :body, schema: {
         type: :object,
