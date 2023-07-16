@@ -2,7 +2,6 @@ class Api::V1::ReservationsController < ApplicationController
   before_action :authenticate_user_by_token!
 
   def index
-    # reservations = @current_user.reservations
     reservations = @current_user.reservations.includes(concert_hall: :concert)
                                 .where(concert_halls: { concerts: { active: true } })
 
