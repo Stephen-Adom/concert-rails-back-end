@@ -64,7 +64,6 @@ RSpec.describe 'api/v1/concerts', type: :request do
   end
 
   path '/api/v1/concerts/{id}' do
-    # You'll want to customize the parameter types...
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
     get('show concert') do
