@@ -5,7 +5,7 @@
     "version": "v1"
   },
   "paths": {
-    "/api/v1/reservations/index": {
+    "/api/v1/reservations": {
       "get": {
         "summary": "list reservations",
         "produces": [
@@ -26,18 +26,81 @@
         }
       }
     },
-    "/api/v1/reservations": {
-      "get": {
-        "summary": "list reservations",
+    "/api/v1/login": {
+      "post": {
+        "summary": "create session",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "credentials",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "username",
+                "password"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/api/v1/register": {
+      "post": {
+        "summary": "create user",
+        "consumes": [
+          "application/json"
+        ],
         "produces": [
           "application/json"
         ],
         "parameters": [
           {
-            "name": "Authorization",
-            "in": "header",
-            "type": "string",
-            "description": "Bearer token"
+            "name": "user",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string",
+                  "format": "email"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "password_confirmation": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "username",
+                "email",
+                "password",
+                "password_confirmation"
+              ]
+            }
           }
         ],
         "responses": {
