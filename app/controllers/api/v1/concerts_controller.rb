@@ -1,7 +1,7 @@
 class Api::V1::ConcertsController < ApplicationController
   before_action :authenticate_user_by_token!, only: %i[create destroy]
   def index
-    concerts = Concert.all
+    concerts = Concert.where(active: true)
     render json: concerts
   end
   
