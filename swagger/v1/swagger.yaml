@@ -5,6 +5,125 @@
     "version": "v1"
   },
   "paths": {
+    "/api/v1/concerts": {
+      "get": {
+        "summary": "list concerts",
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "post": {
+        "summary": "create concert",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "type": "string",
+            "description": "Bearer token"
+          },
+          {
+            "name": "concert_params",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "concert": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "band": {
+                      "type": "string"
+                    },
+                    "image": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "total_seats": {
+                      "type": "integer"
+                    },
+                    "artist": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "band",
+                    "image",
+                    "description",
+                    "total_seats",
+                    "artist"
+                  ]
+                },
+                "concert_hall": {
+                  "type": "object",
+                  "properties": {
+                    "city_id": {
+                      "type": "integer"
+                    },
+                    "date": {
+                      "type": "string",
+                      "format": "date"
+                    }
+                  },
+                  "required": [
+                    "city_id",
+                    "date"
+                  ]
+                }
+              },
+              "required": [
+                "concert",
+                "concert_hall"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
+    "/api/v1/concerts/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "type": "string",
+          "description": "id",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "show concert",
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      },
+      "delete": {
+        "summary": "delete concert",
+        "responses": {
+          "200": {
+            "description": "successful"
+          }
+        }
+      }
+    },
     "/api/v1/reservations": {
       "get": {
         "summary": "list reservations",
