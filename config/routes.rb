@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       get 'reservations/index'
       post '/register', to: 'users#create'
       post '/login', to: 'sessions#create'
-      resources :reservations, only: [:index]
+      resources :reservations, only: [:index, :create]
       resources :concerts, only: [:index, :show, :create, :destroy]
     end
   end
