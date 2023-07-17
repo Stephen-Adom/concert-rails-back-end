@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   mount Rswag::Api::Engine => '/api-docs'
   namespace :api do
     namespace :v1 do
-      get 'reservations/index'
       post '/register', to: 'users#create'
       post '/login', to: 'sessions#create'
       resources :reservations, only: [:index, :create]
