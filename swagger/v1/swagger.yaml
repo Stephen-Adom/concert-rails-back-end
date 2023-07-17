@@ -65,24 +65,16 @@
                 "concert_hall": {
                   "type": "object",
                   "properties": {
-                    "city_name": {
-                      "type": "string"
-                    },
-                    "hall_name": {
-                      "type": "string"
-                    },
-                    "total_seats": {
+                    "city_id": {
                       "type": "integer"
                     },
                     "date": {
                       "type": "string",
-                      "format": "datetime"
+                      "format": "date"
                     }
                   },
                   "required": [
-                    "city_name",
-                    "hall_name",
-                    "total_seats",
+                    "city_id",
                     "date"
                   ]
                 }
@@ -162,6 +154,9 @@
       "post": {
         "summary": "create reservation",
         "consumes": [
+          "application/json"
+        ],
+        "produces": [
           "application/json"
         ],
         "parameters": [
