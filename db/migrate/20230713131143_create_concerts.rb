@@ -4,8 +4,6 @@ class CreateConcerts < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :band
       t.text :description
-      t.integer :total_seats
-      t.integer :reserved_seats
       t.string :artist
       t.text :image
       t.boolean :active, default: true
