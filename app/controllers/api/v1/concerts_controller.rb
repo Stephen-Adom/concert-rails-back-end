@@ -20,8 +20,10 @@ class Api::V1::ConcertsController < ApplicationController
     else
       concert = Concert.new(concert_params)
       if concert.save
-        concert.concert_halls.create(concert_hall_params)
-        render json: concert, status: :created
+        concert_hall_params.each do |concert_hall_param|
+          concert.concert_halls.create(concert_hall_param)
+        end
+        render json: { message: 'Concert created' }, status: :created
       else
         render json: concert.errors, status: :unprocessable_entity
       end
@@ -42,10 +44,10 @@ class Api::V1::ConcertsController < ApplicationController
   private
 
   def concert_params
-    params.require(:concert).permit(:name, :band, :image, :description, :total_seats, :artist)
+    params.require(:concert).permit(:name, :band, :image, :description, :artist)
   end
 
   def concert_hall_params
-    params.require(:concert_hall).permit(:city_id, :date)
+    params.require(:concert_hall).map { |param| param.permit(:hall_name, :city_name, :date, :total_seats) }
   end
 end
