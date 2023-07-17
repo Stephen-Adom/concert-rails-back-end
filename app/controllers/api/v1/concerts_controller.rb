@@ -47,10 +47,6 @@ class Api::V1::ConcertsController < ApplicationController
     params.require(:concert).permit(:name, :band, :image, :description, :artist)
   end
 
-  # def concert_hall_params
-  #   params.require(:concert_hall).permit(:city_name, :hall_name, :date,:total_seats)
-  # end
-
   def concert_hall_params
     params.require(:concert_hall).map { |param| param.permit(:hall_name, :city_name, :date, :total_seats) }
   end
