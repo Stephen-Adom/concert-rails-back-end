@@ -15,7 +15,7 @@ class Api::V1::ReservationsController < ApplicationController
                               name: @current_user.name,
                               concert_name: reservation.concert_hall.concert.name,
                               concert_date: reservation.concert_hall.date,
-                              city_name: reservation.concert_hall.city.name
+                              city_name: reservation.concert_hall.city_name
                             }
                           end
                         end
