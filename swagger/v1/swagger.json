@@ -65,16 +65,24 @@
                 "concert_hall": {
                   "type": "object",
                   "properties": {
-                    "city_id": {
+                    "city_name": {
+                      "type": "string"
+                    },
+                    "hall_name": {
+                      "type": "string"
+                    },
+                    "total_seats": {
                       "type": "integer"
                     },
                     "date": {
                       "type": "string",
-                      "format": "date"
+                      "format": "datetime"
                     }
                   },
                   "required": [
-                    "city_id",
+                    "city_name",
+                    "hall_name",
+                    "total_seats",
                     "date"
                   ]
                 }

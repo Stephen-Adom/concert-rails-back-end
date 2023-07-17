@@ -11,18 +11,19 @@ RSpec.describe 'api/v1/concerts', type: :request do
           band: { type: :string },
           image: { type: :string },
           description: { type: :string },
-          total_seats: { type: :integer },
           artist: { type: :string }
         },
-        required: %w[name band image description total_seats artist]
+        required: %w[name band image description artist]
       },
       concert_hall: {
         type: :object,
         properties: {
-          city_id: { type: :integer },
-          date: { type: :string, format: :date }
+          city_name: { type: :string },
+          hall_name: { type: :string },
+          total_seats: { type: :integer },
+          date: { type: :string, format: :datetime }
         },
-        required: %w[city_id date]
+        required: %w[city_name hall_name total_seats date]
       }
     },
     required: %w[concert concert_hall]
