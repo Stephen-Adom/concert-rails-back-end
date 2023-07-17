@@ -63,28 +63,31 @@
                   ]
                 },
                 "concert_hall": {
-                  "type": "object",
-                  "properties": {
-                    "city_name": {
-                      "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "city_name": {
+                        "type": "string"
+                      },
+                      "hall_name": {
+                        "type": "string"
+                      },
+                      "total_seats": {
+                        "type": "integer"
+                      },
+                      "date": {
+                        "type": "string",
+                        "format": "datetime"
+                      }
                     },
-                    "hall_name": {
-                      "type": "string"
-                    },
-                    "total_seats": {
-                      "type": "integer"
-                    },
-                    "date": {
-                      "type": "string",
-                      "format": "datetime"
-                    }
-                  },
-                  "required": [
-                    "city_name",
-                    "hall_name",
-                    "total_seats",
-                    "date"
-                  ]
+                    "required": [
+                      "city_name",
+                      "hall_name",
+                      "total_seats",
+                      "date"
+                    ]
+                  }
                 }
               },
               "required": [
