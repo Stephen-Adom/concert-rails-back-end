@@ -14,16 +14,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_13_190152) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "cities", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "concert_halls", force: :cascade do |t|
     t.integer "concert_id"
-    t.integer "city_id"
-    t.date "date"
+    t.string "hall_name"
+    t.text "city_name"
+    t.datetime "date"
+    t.integer "total_seats"
+    t.integer "reserved_seats"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -32,8 +29,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_13_190152) do
     t.string "name"
     t.string "band"
     t.text "description"
-    t.integer "total_seats"
-    t.integer "reserved_seats"
     t.string "artist"
     t.text "image"
     t.boolean "active", default: true
