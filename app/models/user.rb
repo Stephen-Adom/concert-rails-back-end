@@ -8,6 +8,17 @@ class User < ApplicationRecord
 
   has_many :reservations, dependent: :destroy, class_name: 'Reservation', foreign_key: 'user_id'
 
+  def send_user_information
+    {
+      authentication_token:,
+      user_id: id,
+      name:,
+      email:,
+      username:,
+      role:
+    }
+  end
+
   private
 
   def generate_authentication_token
