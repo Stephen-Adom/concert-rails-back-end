@@ -8,17 +8,16 @@ class User < ApplicationRecord
 
   has_many :reservations, dependent: :destroy, class_name: 'Reservation', foreign_key: 'user_id'
 
-
   def send_user_information
-    return {
-      authentication_token: authentication_token,
-      user_id: self.id,
-      name: self.name,
-      email: self.email,
-      username: self.username,
-      role: self.role
+    {
+      authentication_token:,
+      user_id: id,
+      name:,
+      email:,
+      username:,
+      role:
     }
-   end
+  end
 
   private
 
@@ -28,6 +27,4 @@ class User < ApplicationRecord
       break unless User.exists?(authentication_token:)
     end
   end
-
-
 end

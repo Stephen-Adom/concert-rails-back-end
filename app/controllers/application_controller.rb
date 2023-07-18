@@ -9,10 +9,10 @@ class ApplicationController < ActionController::API
 
     render json: { error: 'Invalid credentials', hh: @token }, status: :unauthorized
   end
- 
-  def create_admin_user
-   return unless User.find_by(username: 'admin').nil?
-   User.create(username: 'admin', password: 'admin', role: 'admin', name: 'admin', email: 'admin@admin.com')
-  end
 
+  def create_admin_user
+    return unless User.find_by(username: 'admin').nil?
+
+    User.create(username: 'admin', password: 'admin', role: 'admin', name: 'admin', email: 'admin@admin.com')
+  end
 end
