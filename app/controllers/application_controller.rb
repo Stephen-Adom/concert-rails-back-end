@@ -15,4 +15,12 @@ class ApplicationController < ActionController::API
 
     User.create(username: 'admin', password: 'admin', role: 'admin', name: 'admin', email: 'admin@admin.com')
   end
+
+  def user_must_be_admin
+    return if @current_user.role == 'admin'
+
+    render json: { error: 'Unauthorized only admin can delete concerts' }, status: :unprocessable_entity
+    nil
+  end
+  # attr_reader :current_user
 end
