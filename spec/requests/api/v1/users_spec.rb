@@ -12,6 +12,7 @@ RSpec.describe 'api/v1/users', type: :request do
           name: { type: :string },
           username: { type: :string },
           email: { type: :string, format: :email },
+          role: { type: :string },
           password: { type: :string },
           password_confirmation: { type: :string }
         },

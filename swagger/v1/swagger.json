@@ -261,6 +261,9 @@
                   "type": "string",
                   "format": "email"
                 },
+                "role": {
+                  "type": "string"
+                },
                 "password": {
                   "type": "string"
                 },
