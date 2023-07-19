@@ -68,6 +68,24 @@ RSpec.describe 'api/v1/concerts', type: :request do
     end
   end
 
+  path '/api/v1/all_concerts' do
+    get('list all concerts') do
+      
+      parameter name: 'Authorization', in: :header, type: :string, description: 'Bearer token'
+
+      response(200, 'successful') do
+        after do |example|
+          example.metadata[:response][:content] = {
+            'application/json' => {
+              example: JSON.parse(response.body, symbolize_names: true)
+            }
+          }
+        end
+        run_test!
+      end
+    end
+  end
+
   path '/api/v1/concerts/{id}' do
     parameter name: 'id', in: :path, type: :string, description: 'id'
 
