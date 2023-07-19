@@ -70,7 +70,6 @@ RSpec.describe 'api/v1/concerts', type: :request do
 
   path '/api/v1/all_concerts' do
     get('list all concerts') do
-      
       parameter name: 'Authorization', in: :header, type: :string, description: 'Bearer token'
 
       response(200, 'successful') do
