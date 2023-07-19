@@ -25,15 +25,16 @@ class Api::V1::ReservationsController < ApplicationController
 
   def create
     concert_hall = ConcertHall.find(params[:reservation][:concert_hall_id])
-    user = @current_user 
-  
+    user = @current_user
+
     if concert_hall.total_seats > concert_hall.reserved_seats
-      if user.reservations.where(concert_hall: concert_hall).exists?
-        render json: { error: 'You have already made a reservation at this concert hall' }, status: :unprocessable_entity
+      if user.reservations.where(concert_hall:).exists?
+        render json: { error: 'You have already made a reservation at this concert hall' },
+               status: :unprocessable_entity
       else
         reservation = Reservation.new(reservation_params)
         reservation.user = user
-  
+
         if reservation.save
           concert_hall.increment!(:reserved_seats)
           render json: { message: 'Reservation created successfully' }, status: :created
@@ -45,7 +46,7 @@ class Api::V1::ReservationsController < ApplicationController
       render json: { error: 'Not enough seats available in the concert hall' }, status: :unprocessable_entity
     end
   end
-  
+
 
   private
 
