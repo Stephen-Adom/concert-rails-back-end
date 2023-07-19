@@ -19,7 +19,7 @@ class ApplicationController < ActionController::API
   def user_must_be_admin
     return if @current_user.role == 'admin'
 
-    render json: { error: 'Unauthorized only admin can add delete or access concerts' }, status: :unprocessable_entity
+    render json: { error: 'Unauthorized only admin can delete concerts' }, status: :unprocessable_entity
     nil
   end
   # attr_reader :current_user

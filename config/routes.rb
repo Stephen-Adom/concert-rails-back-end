@@ -7,7 +7,6 @@ Rails.application.routes.draw do
       post '/login', to: 'sessions#create'
       resources :reservations, only: [:index, :create]
       resources :concerts, only: [:index, :show, :create, :destroy]
-      get '/all_concerts', to: 'concerts#all_concerts', as: 'all_concerts'
     end
   end
 end
