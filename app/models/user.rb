@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
   validates :role, presence: true
-  
+
   has_many :reservations, dependent: :destroy, class_name: 'Reservation', foreign_key: 'user_id'
 
   def send_user_information
