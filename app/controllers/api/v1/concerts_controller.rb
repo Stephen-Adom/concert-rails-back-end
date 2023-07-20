@@ -7,7 +7,7 @@ class Api::V1::ConcertsController < ApplicationController
   end
 
   def all_concerts
-    concerts = Concert.all
+    concerts = Concert.all.order(created_at: :desc)
     render json: concerts
   end
 
