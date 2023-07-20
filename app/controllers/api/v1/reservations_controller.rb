@@ -11,11 +11,22 @@ class Api::V1::ReservationsController < ApplicationController
                           reservations.map do |reservation|
                             {
                               id: reservation.id,
-                              name: @current_user.name,
-                              concert_name: reservation.concert_hall.concert.name,
-                              concert_date: reservation.concert_hall.date,
-                              city_name: reservation.concert_hall.city_name,
-                              hall_name: reservation.concert_hall.hall_name
+                              user: {
+                                id: @current_user.id,
+                                name: @current_user.name,
+                              },
+                              concert: {
+                                id: reservation.concert_hall.concert.id,
+                                name: reservation.concert_hall.concert.name,
+                                date: reservation.concert_hall.date,
+                              },
+                              concert_hall: {
+                                id: reservation.concert_hall.id,
+                                name: reservation.concert_hall.hall_name
+                              },
+                              city: {
+                                name: reservation.concert_hall.city_name,
+                              }
                             }
                           end
                         end
