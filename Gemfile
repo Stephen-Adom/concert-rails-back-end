@@ -50,4 +50,4 @@ group :development do
   # gem "spring"
 end
 
-gem "bullet", "~> 7.0"
+gem 'bullet', '~> 7.0'
