@@ -13,19 +13,19 @@ class Api::V1::ReservationsController < ApplicationController
                               id: reservation.id,
                               user: {
                                 id: @current_user.id,
-                                name: @current_user.name,
+                                name: @current_user.name
                               },
                               concert: {
                                 id: reservation.concert_hall.concert.id,
                                 name: reservation.concert_hall.concert.name,
-                                date: reservation.concert_hall.date,
+                                date: reservation.concert_hall.date
                               },
                               concert_hall: {
                                 id: reservation.concert_hall.id,
                                 name: reservation.concert_hall.hall_name
                               },
                               city: {
-                                name: reservation.concert_hall.city_name,
+                                name: reservation.concert_hall.city_name
                               }
                             }
                           end
