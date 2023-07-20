@@ -7,7 +7,7 @@ class ApplicationController < ActionController::API
 
     return unless @token.blank? || @current_user.nil?
 
-    render json: { error: 'Invalid credentials', hh: @token }, status: :unauthorized
+    render json: { error: 'Invalid credentials' }, status: :unauthorized
   end
 
   def create_admin_user
