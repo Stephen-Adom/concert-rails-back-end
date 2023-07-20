@@ -40,7 +40,7 @@
 
 The **Concert reservation App Back End** is an example of a back end web application fully used as an api for the front end [concert-react-front-end](https://github.com/Stephen-Adom/concert-react-front-end).
 
-This App is built with **Ruby on Rails** and **PostgreSQL** and contains the database migration files.It implement the registration, login, and other api endpoints for the front end [concert-react-front-end](https://github.com/Stephen-Adom/concert-react-front-end).
+This App is built with **Ruby on Rails** and **PostgreSQL** and contains the database migration files. It implement the registration, login, and other api endpoints for the front end [concert-react-front-end](https://github.com/Stephen-Adom/concert-react-front-end).
 
 the front end will be built following this design provide by [Murat Korhmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) 
 
@@ -75,7 +75,6 @@ the front end will be built following this design provide by [Murat Korhmaz](htt
 ### Key Features <a name="key-features"></a>
 
 - Use database migration files to maintain database schema.
-- Use Devise gem for authentication
 - Limit access to web app resources based on authorization rules
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -109,7 +108,7 @@ Clone this repository to your desired folder:
 
 ```
   git clone https://github.com/Stephen-Adom/concert-rails-back-end.git
-  cd Budget-App-Rails-Capstone-Project
+  cd concert-rails-back-end
 ```
 
 ### Install
@@ -157,8 +156,8 @@ You can deploy this project using:
 
 👤 **Derbal Mohammed El Amine**
 
-- GitHub: [@githubhandle](https://github.com/AmineDerbal)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohammed-el-amine-derbal-4038541b6/)
+- GitHub: [@AmineDerbal](https://github.com/AmineDerbal)
+- LinkedIn: [Mohammed El Amine Derbal](https://www.linkedin.com/in/mohammed-el-amine-derbal-4038541b6/)
 
 👤 **Oussama Elabdioui**
 
@@ -211,6 +210,6 @@ If you like this project and want to support me make cooler projects Give this p
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./LICENSE.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
