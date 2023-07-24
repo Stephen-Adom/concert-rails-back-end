@@ -117,6 +117,9 @@ Install the project dependencies with:
 
 ```
   bundle install
+  rails db:create
+  rails db:migrate
+  rails db:seed
 ```
 
 ### Usage <a name="usage"></a>
@@ -132,7 +135,7 @@ To run the project, execute the following command:
 To run all tests, including unit and integration tests, run the following command:
 
 ```
-  rspec spec
+  rake rswag
 ```
 
 ### Deployment
