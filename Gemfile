@@ -45,6 +45,4 @@ group :development, :test do
   gem 'rswag'
 end
 
-gem 'rswag'
-
 gem 'bullet', '~> 7.0'
