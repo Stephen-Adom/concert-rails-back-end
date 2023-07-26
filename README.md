@@ -24,6 +24,7 @@
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
+    - [Database Schema](#database-schema)
     - [Usage ](#usage-)
     - [Run tests](#run-tests)
     - [Deployment](#deployment)
@@ -81,7 +82,7 @@ the front end will be built following this design provide by [Murat Korhmaz](htt
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- N/A
+- Live Demo [here](https://concert-react-front-end.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,6 +122,13 @@ Install the project dependencies with:
   rails db:migrate
   rails db:seed
 ```
+
+### Database Schema
+
+<div align="center">
+<img src="./app/assets/Blank diagram.png" alt="logo" width="auto"  height="auto" />
+  <br/>
+</div>
 
 ### Usage <a name="usage"></a>
 
@@ -179,7 +187,6 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Deployement
 - Add more features.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
