@@ -17,8 +17,6 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: postgres
-  password:
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -84,5 +82,3 @@ test:
 production:
   <<: *default
   database: concert_rails_back_end_production
-  username: concert_rails_back_end
-  password: <%= ENV["CONCERT_RAILS_BACK_END_DATABASE_PASSWORD"] %>
