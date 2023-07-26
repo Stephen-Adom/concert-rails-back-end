@@ -82,7 +82,7 @@ the front end will be built following this design provide by [Murat Korhmaz](htt
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- N/A
+- Live Demo [here](https://concert-react-front-end.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
