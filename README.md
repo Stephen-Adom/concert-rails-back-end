@@ -24,6 +24,7 @@
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
+    - [Database Schema](#database-schema)
     - [Usage ](#usage-)
     - [Run tests](#run-tests)
     - [Deployment](#deployment)
@@ -121,6 +122,13 @@ Install the project dependencies with:
   rails db:migrate
   rails db:seed
 ```
+
+### Database Schema
+
+<div align="center">
+<img src="./app/assets/Blank diagram.png" alt="logo" width="auto"  height="auto" />
+  <br/>
+</div>
 
 ### Usage <a name="usage"></a>
 
