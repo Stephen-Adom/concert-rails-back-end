@@ -7,8 +7,6 @@
   <h3><b>Concert Reservation App</b></h3>
 
 </div>
-
-![](https://img.shields.io/badge/Microverse-blueviolet)
 <a name="readme-top"></a>
 
 # 📗 Table of Contents
