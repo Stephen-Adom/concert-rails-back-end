@@ -15,11 +15,13 @@
 
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 Blog App ](#about-the-project)
+
+  - [ 📖 Kanban Board ](#-kanban-board-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-     - [🚀 Live Demo](#live-demo)
-    - [📺 Presentation](#presentation) 
+    - [🚀 Live Demo](#live-demo)
+    - [📺 Presentation](#presentation)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -43,8 +45,20 @@ The **Concert reservation App Back End** is an example of a back end web applica
 
 This App is built with **Ruby on Rails** and **PostgreSQL** and contains the database migration files. It implement the registration, login, and other api endpoints for the front end [concert-react-front-end](https://github.com/Stephen-Adom/concert-react-front-end).
 
-the front end will be built following this design provide by [Murat Korhmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) 
+the front end will be built following this design provide by [Murat Korhmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
 
+# 📖 Kanban Board <a name="kanban-board"></a>
+
+You can check the Kanban Board [here](https://github.com/users/Stephen-Adom/projects/7)
+
+The initial state of the board is as [shown here](https://user-images.githubusercontent.com/42853016/253240226-fe145e92-b944-41b8-bc9f-8662c63e359c.png)
+
+There are 4 contributors to this project :
+
+- [Stephen Adom](https://github.com/Stephen-Adom)
+- [Amine Derbal](https://github.com/AmineDerbal)
+- [Aman Worku](https://github.com/AmanWorku)
+- [Oussama Elabdioui](https://github.com/codedit334)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -87,6 +101,7 @@ the front end will be built following this design provide by [Murat Korhmaz](htt
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📺 Presentation <a name="presentation"></a>
+
 - N/A
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -177,6 +192,7 @@ You can deploy this project using:
 - LinkedIn: [Oussama Elabdioui](https://www.linkedin.com/in/oussama-elabdioui-4677a41b6/)
 
 ### 👤 **Aman Worku**:
+
 - GitHub: [@Aman_on_GitHub](https://github.com/AmanWorku)
 - Twitter: [@Aman_on_Twitter](https://twitter.com/Amexworku)
 - LinkedIn: [@Aman_on_LinkedIn](https://www.linkedin.com/in/aman-worku-tsegaw/)
